@@ -1,0 +1,44 @@
+class Solution {
+    public int minBishopMoves(int[] source, int[] target) {
+        int xdif = Math.abs(source[0] - target[0]);
+        int ydif = Math.abs(source[1] - target[1]);
+        if((xdif + ydif)%2 != 0){
+            return -1;
+        }
+        else if(xdif == ydif){
+            return 1;
+        }
+        return 2;
+    }
+}
+
+/*
+There is an 8 x 8 empty chessboard with 1-indexed rows and columns.
+
+You are given an array source = [sr, sc] representing the starting position of a bishop, and an array target = [tr, tc]. In one move, the bishop travels any number of squares along a single diagonal direction, staying within the board.
+
+Return the minimum number of moves for the bishop to land exactly on target. If it can never reach target, return -1.
+
+ 
+
+Example 1:
+
+Input: source = [8,1], target = [1,8]
+
+Output: 1
+
+Example 2:
+
+Input: source = [4,2], target = [1,3]
+
+Output: 2
+
+Input: source = [1,1], target = [3,4]
+
+Output: -1
+
+Explanation:
+
+No matter how many diagonal moves it makes, the bishop starting at (1, 1) can never land on (3, 4). Thus, the answer is -1.
+
+ */

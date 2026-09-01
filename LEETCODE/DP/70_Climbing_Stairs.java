@@ -1,3 +1,8 @@
+/* Tabulation + Space Optimization 
+    time Complexity: O(n)
+    Space Complexity: O(1)
+*/
+
 class Solution {
     public int climbStairs(int n) {
         int prev2 = 1;
